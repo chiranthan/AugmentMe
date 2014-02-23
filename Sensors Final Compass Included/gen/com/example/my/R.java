@@ -27,7 +27,8 @@ public final class R {
         public static final int accelerometerX_text=0x7f080001;
         public static final int accelerometerY_text=0x7f080000;
         public static final int accelerometerZ_text=0x7f080002;
-        public static final int action_settings=0x7f080017;
+        public static final int action_settings=0x7f080015;
+        public static final int compass_text=0x7f08000c;
         public static final int gyroX_text=0x7f080004;
         public static final int gyroY_text=0x7f080003;
         public static final int gyroZ_text=0x7f080005;
@@ -35,18 +36,15 @@ public final class R {
         public static final int magneticFieldY_text=0x7f080007;
         public static final int magneticFieldZ_text=0x7f080008;
         public static final int textView1=0x7f08000b;
-        public static final int textView10=0x7f080013;
-        public static final int textView11=0x7f080014;
-        public static final int textView12=0x7f080015;
-        public static final int textView13=0x7f080016;
+        public static final int textView10=0x7f080011;
+        public static final int textView11=0x7f080012;
+        public static final int textView12=0x7f080013;
+        public static final int textView13=0x7f080014;
         public static final int textView2=0x7f08000a;
-        public static final int textView3=0x7f08000c;
         public static final int textView4=0x7f08000d;
         public static final int textView5=0x7f08000e;
-        public static final int textView6=0x7f080012;
         public static final int textView7=0x7f08000f;
         public static final int textView8=0x7f080010;
-        public static final int textView9=0x7f080011;
         public static final int text_GPS=0x7f080009;
     }
     public static final class layout {

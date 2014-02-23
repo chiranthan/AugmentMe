@@ -36,11 +36,11 @@ public class MainActivity extends Activity {
 
     private List<Sensor> sensors;
     LocationListener mlocListener;
+    private Sensor mCompass;
  
     
-    private TextView mGyroXTextView;
-    private TextView mGyroYTextView;
-    private TextView mGyroZTextView;
+    private TextView mCompDTextView;
+    
     protected TextView txtgps;
 
     private SensorManager mSensorManager;
@@ -50,12 +50,12 @@ public class MainActivity extends Activity {
         @Override
     public void onSensorChanged(SensorEvent event) {
         Sensor sensor = event.sensor;
-        if (sensor.getType() == Sensor.TYPE_GYROSCOPE) {
-            // Gyroscope doesn't really have a notion of accuracy.
-            // Due to a bug in Android, the gyroscope incorrectly returns
-            // its status as unreliable. This can be safely ignored and does
-            // not impact the accuracy of the readings.
-            event.accuracy = SensorManager.SENSOR_STATUS_ACCURACY_HIGH;
+        if (sensor.getType() == Sensor.TYPE_ORIENTATION) {
+        	float azimuth = Math.round(event.values[0]);
+            // The other values provided are: 
+            //  float pitch = event.values[1];
+            //  float roll = event.values[2];
+        	mCompDTextView.setText("Direction: " + Float.toString(azimuth));
         }
         updateSensorUi(sensor.getType(), event.accuracy, event.values);
         
@@ -79,6 +79,7 @@ public class MainActivity extends Activity {
         // initSensorUi();
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensors = mSensorManager.getSensorList(Sensor.TYPE_ALL);
+       
          mlocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
           mlocListener = new LocationListener(){
         	  public void onLocationChanged(Location loc) {
@@ -113,14 +114,8 @@ public class MainActivity extends Activity {
         mAccelYTextView = (TextView) findViewById(R.id.accelerometerY_text);
         mAccelZTextView = (TextView) findViewById(R.id.accelerometerZ_text);
         
-    
-
-        mGyroXTextView = (TextView) findViewById(R.id.gyroX_text);
-        mGyroYTextView = (TextView) findViewById(R.id.gyroY_text);
-        mGyroZTextView = (TextView) findViewById(R.id.gyroZ_text);
-        
-        
-
+        mCompDTextView = (TextView) findViewById(R.id.compass_text);
+   
         mMagXTextView = (TextView) findViewById(R.id.magneticFieldX_text);
         mMagYTextView = (TextView) findViewById(R.id.magneticFieldY_text);
         mMagZTextView = (TextView) findViewById(R.id.magneticFieldZ_text);
@@ -136,11 +131,8 @@ private void updateSensorUi(int sensorType, int accuracy, float[] values) {
             xTextView = mAccelXTextView;
             yTextView = mAccelYTextView;
             zTextView = mAccelZTextView;
-        } else if (sensorType == Sensor.TYPE_GYROSCOPE) {
-            xTextView = mGyroXTextView;
-            yTextView = mGyroYTextView;
-            zTextView = mGyroZTextView;
-        } else if (sensorType == Sensor.TYPE_MAGNETIC_FIELD) {
+        } 
+         else if (sensorType == Sensor.TYPE_MAGNETIC_FIELD) {
             xTextView = mMagXTextView;
             yTextView = mMagYTextView;
             zTextView = mMagZTextView;
@@ -191,8 +183,8 @@ private void updateSensorUi(int sensorType, int accuracy, float[] values) {
      setupSensors();
      mSensorManager.registerListener(mSensorEventListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_GAME);
      mSensorManager.registerListener(mSensorEventListener, mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD), SensorManager.SENSOR_DELAY_GAME);
-     mSensorManager.registerListener(mSensorEventListener, mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE), SensorManager.SENSOR_DELAY_GAME);
      mlocManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,0, mlocListener);
+     mSensorManager.registerListener(mSensorEventListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION), SensorManager.SENSOR_DELAY_NORMAL);
  }
  
  protected void onPause() {

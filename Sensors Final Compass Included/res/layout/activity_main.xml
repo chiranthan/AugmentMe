@@ -106,12 +106,12 @@
         android:text="" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/compass_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/text_GPS"
-        android:text="X-Axis:" />
+        android:text="Degree:" />
 
     <TextView
         android:id="@+id/textView4"
@@ -119,7 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/magneticFieldX_text"
         android:layout_alignBottom="@+id/magneticFieldX_text"
-        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignLeft="@+id/compass_text"
         android:text="X-Axis:" />
 
     <TextView
@@ -149,15 +149,6 @@
         android:text="Z-Axis:" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/gyroZ_text"
-        android:layout_alignBottom="@+id/gyroZ_text"
-        android:layout_alignRight="@+id/textView6"
-        android:text="Z-Axis:" />
-
-    <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -180,8 +171,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/gyroX_text"
-        android:layout_alignLeft="@+id/textView3"
-        android:text="Gyroscope"
+        android:layout_alignLeft="@+id/compass_text"
+        android:text="Compass"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -192,14 +183,6 @@
         android:layout_alignLeft="@+id/textView4"
         android:text="Magnetic Field"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:text="Y-Axis:" />
 
     <TextView
         android:id="@+id/textView13"
