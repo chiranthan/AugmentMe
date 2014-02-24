@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".FindActivity" 
+    android:background="@drawable/city">
+
+     <com.facebook.widget.LoginButton
+         android:id="@+id/authButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/button2"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="32dp"
+         android:onClick="send" />
+
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/authButton"
+         android:layout_marginRight="76dp"
+         android:layout_marginTop="100dp"
+         android:maxHeight="200dp"
+         android:text="Find Buildings"
+         android:textStyle="italic" />
+
+     <Button
+         android:id="@+id/button2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/button1"
+         android:layout_below="@+id/button1"
+         android:layout_marginTop="78dp"
+         android:maxHeight="200dp"
+         android:text="Find Friends"
+         android:textStyle="italic" />
+     
+</RelativeLayout>

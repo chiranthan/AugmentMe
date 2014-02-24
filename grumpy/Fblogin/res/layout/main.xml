@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/city">
+
+      <com.facebook.widget.LoginButton
+          android:id="@+id/authButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="54dp" />
+
+      <TextView
+          android:id="@+id/welcome"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/authButton"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="18dp"
+          android:text="FindMe"
+          android:textSize="60dp" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignRight="@+id/authButton"
+          android:layout_marginBottom="58dp"
+          android:layout_marginRight="28dp"
+          android:onClick="sendMessage"
+          android:text="@string/hello_world"
+          android:visibility="invisible" />
+
+</RelativeLayout>
