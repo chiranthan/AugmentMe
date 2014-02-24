@@ -9,26 +9,27 @@
     tools:context=".FindActivity" 
     android:background="@drawable/city">
 
-     <com.facebook.widget.LoginButton
-         android:id="@+id/authButton"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/button2"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="32dp"
-         android:onClick="send" />
-
      <Button
          android:id="@+id/button1"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
          android:layout_below="@+id/authButton"
-         android:layout_marginRight="76dp"
-         android:layout_marginTop="100dp"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="74dp"
          android:maxHeight="200dp"
          android:text="Find Buildings"
-         android:textStyle="italic" />
+         android:textStyle="italic"
+         android:width="200dp" />
+
+     <com.facebook.widget.LoginButton
+         android:id="@+id/authButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/button1"
+         android:layout_alignParentTop="true"
+         android:layout_marginLeft="19dp"
+         android:layout_marginTop="35dp"
+         android:onClick="send" />
 
      <Button
          android:id="@+id/button2"
@@ -36,9 +37,11 @@
          android:layout_height="wrap_content"
          android:layout_alignLeft="@+id/button1"
          android:layout_below="@+id/button1"
-         android:layout_marginTop="78dp"
+         android:layout_marginTop="56dp"
          android:maxHeight="200dp"
+         android:maxWidth="200dp"
          android:text="Find Friends"
-         android:textStyle="italic" />
+         android:textStyle="italic"
+         android:width="200dp" />
      
 </RelativeLayout>
