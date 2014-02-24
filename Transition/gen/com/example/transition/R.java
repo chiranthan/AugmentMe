@@ -25,11 +25,10 @@ public final class R {
     }
     public static final class id {
         public static final int academic=0x7f080003;
-        public static final int action_settings=0x7f08000e;
+        public static final int action_settings=0x7f08000d;
         public static final int admin=0x7f080006;
         public static final int buildings=0x7f08000b;
         public static final int button1=0x7f080009;
-        public static final int camera_preview=0x7f08000d;
         public static final int editText1=0x7f080008;
         public static final int food=0x7f080005;
         public static final int friends=0x7f08000c;

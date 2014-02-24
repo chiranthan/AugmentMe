@@ -14,9 +14,14 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,48 +30,51 @@ public class screen2 extends Activity{
 	private Camera mCamera;
     private CameraPreview mPreview;
 	private float accx = 400, accy = 560 ;
-	DrawacclView av;
-	DrawcompView cv;
-	FrameLayout alParent;
-	DecimalFormat df = new DecimalFormat("###.#");
+	private FrameLayout preview;
+	private DrawacclView av;
+	private DrawcompView cv;
+	//private FrameLayout main = (FrameLayout) findViewById(R.id.mainFrame);
 	
 	//NH Coordinates:
-	Double nhx = -97.11369355;
-	Double nhy = 32.73196555;
+	private Double nhx = -97.11369355;
+	private Double nhy = 32.73196555;
 	
 	//ERB Coordinates:
-	Double erbx = -97.11282096;
-	Double erby = 32.73297688;
+	private Double erbx = -97.11282096;
+	private Double erby = 32.73297688;
 	
 	//All Sensor code:
 	private List<Sensor> sensors;
 	private SensorManager mSensorManager;
     private LocationManager mlocManager;
     private LocationListener mlocListener;
+    private Location loc2 = new Location("dummyprovider");
     private TextView txtgps;
     private TextView txtcomp;
     private float angle = 0;
-    float azimuth;
+    private float distance = 0;
+    private float azimuth;
     
 	private SensorEventListener mSensorEventListener = new SensorEventListener() {
         @Override
 	    public void onSensorChanged(SensorEvent event) {
 	        Sensor sensor = event.sensor;
-	        int tx = 0;// treshold
+	        //For Accelerometer
+	        /*int tx = 0;// treshold
 	        int ty = 0;
 	        int snx = 35;//senitivity
 	        int sny = 55;
-	        if(sensor.getType() == Sensor.TYPE_ACCELEROMETER){
+	         if(sensor.getType() == Sensor.TYPE_ACCELEROMETER){
 		        if(event.values[0] > tx || event.values[0] < -tx)
 		        	 accx = -(event.values[0])*snx;
 		        if(event.values[1] > ty || event.values[1] < -ty)
 		        	 accy = (event.values[1])*sny;
 		    	 av.setX(accx);
 		    	 av.setY(accy);
-	        }
+	        } */
 	    	 if (sensor.getType() == Sensor.TYPE_ORIENTATION) {
 	         	azimuth = Math.round(event.values[0]);
-	         	//cv.setRotation(-azimuth);
+	         	cv.setRotation(-azimuth +angle);
 	             // The other values provided are: 
 	             //  float pitch = event.values[1];
 	             //  float roll = event.values[2];
@@ -88,10 +96,17 @@ public class screen2 extends Activity{
 	 mlocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 	 mlocListener = new LocationListener(){
    	  public void onLocationChanged(Location loc) {
-   		  	angle = (float)(Math.atan((loc.getLongitude() - erby)/(loc.getLatitude() - erbx)));
-   	        String Text = "Latitude = "+ loc.getLatitude() + "\nLongitude = " + loc.getLongitude();
-   	        txtgps.setText((int)angle);
-   	        //cv.setRotation(angle);
+   		  	//angle = (float) Math.toDegrees((Math.atan((loc.getLatitude() - erby)/(loc.getLongitude() - erbx))));
+   		    loc2.setLatitude(erby);
+   		    loc2.setLongitude(erbx);
+   		    angle = loc.bearingTo(loc2);
+   		  	//distance = (float) Math.sqrt((loc.getLatitude() - erby)*(loc.getLatitude() - erby)+ (loc.getLongitude() - erbx)*(loc.getLongitude() - erbx));
+   		    distance = loc2.distanceTo(loc);
+   	        //String Text = "Longitude = "+ loc.getLongitude() + "\nLatitude = " + loc.getLatitude();
+   		  	String s = Float.toString(angle);
+   		  	String dist = Float.toString(distance);
+   	        txtgps.setText("Distance = " + dist + " m \n" + "  Angle = " + s);
+   		  	//txtgps.setText("Lat = " + loc2.getLatitude() + " \n long = " + loc2.getLongitude());
    	        //Toast.makeText(getApplicationContext(), Text, Toast.LENGTH_SHORT).show();
    	    }
 
@@ -151,23 +166,28 @@ public class screen2 extends Activity{
 	}
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.screen2);
-		mCamera = getCameraInstance();
-
+		preview = new FrameLayout(this);
+		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT);
+		preview.setLayoutParams(lp);
+		setContentView(preview);
+		//setContentView(R.layout.screen2);
+		//preview = (FrameLayout) findViewById(R.id.camera_preview);
+        mCamera = getCameraInstance();
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
-        FrameLayout preview = (FrameLayout) this.findViewById(R.id.camera_preview);
         preview.addView(mPreview);
-        av = new DrawacclView(this,accx,accy);
+        //av = new DrawacclView(this,accx,accy);
         cv = new DrawcompView(this);
         txtgps = new TextView(getBaseContext());
         txtcomp = new TextView(getBaseContext());
-        preview.addView(av);
+        txtgps.setTextSize(17);
+        txtcomp.setTextSize(10);
+        //preview.addView(av);
         preview.addView(cv);
         preview.addView(txtgps);
         preview.addView(txtcomp);
         txtgps.setText("Waiting for information from GPS...");
-        txtcomp.setX(300);
+        txtcomp.setX(550);
         txtcomp.setText("compass view...");
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
