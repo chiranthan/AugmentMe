@@ -25,8 +25,8 @@ float x, y;
  @Override
  protected void onDraw(Canvas canvas){
  // A Simple Text Render to test the display
- canvas.drawLine(400, 300, 400, 130, stickPaint);
- canvas.drawLine(350, 170, 404, 130, headPaint);
- canvas.drawLine(450, 170, 396, 130, headPaint);
+	canvas.drawLine(400, 300, 400, 130, stickPaint);
+ 	canvas.drawLine(350, 170, 404, 130, headPaint);
+ 	canvas.drawLine(450, 170, 396, 130, headPaint);
  }
 }

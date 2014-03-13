@@ -24,6 +24,6 @@ float x, y;
  @Override
  protected void onDraw(Canvas canvas){
  // A Simple Text Render to test the display
- canvas.drawCircle(x, y, 50, textPaint );
+ canvas.drawCircle(x, y, 10, textPaint );
  }
 }
