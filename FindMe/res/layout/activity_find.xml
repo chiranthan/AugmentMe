@@ -10,7 +10,7 @@
     android:background="@drawable/city">
 
      <Button
-         android:id="@+id/button1"
+         android:id="@+id/next"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_below="@+id/authButton"
@@ -26,18 +26,18 @@
          android:id="@+id/authButton"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/button1"
+         android:layout_alignLeft="@+id/next"
          android:layout_alignParentTop="true"
          android:layout_marginLeft="19dp"
          android:layout_marginTop="35dp"
          android:onClick="send" />
 
      <Button
-         android:id="@+id/button2"
+         android:id="@+id/login"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignLeft="@+id/button1"
-         android:layout_below="@+id/button1"
+         android:layout_alignLeft="@+id/next"
+         android:layout_below="@+id/next"
          android:layout_marginTop="56dp"
          android:maxHeight="200dp"
          android:maxWidth="200dp"

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.findme.R;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -46,6 +47,17 @@ public class screen2 extends Activity{
 	private Double erbx = -97.11282096;
 	private Double erby = 32.73297688;
 	
+	//MAC Coordinates:
+	private Double macx = -97.117644;
+	private Double macy = 32.731548;
+	
+	// General coordinates
+	private Double locx = 0.00;
+	private Double locy = 0.00;
+	
+	// Building name
+	String building = FindBuildings.value;
+	
 	//All Sensor code:
 	private List<Sensor> sensors;
 	private SensorManager mSensorManager;
@@ -58,10 +70,11 @@ public class screen2 extends Activity{
     private float distance = 0;
     private float azimuth;
     private float st_look;
-    private float actx, acty, accx = 10, accy = 10;
+    private float actx, acty, accx = 50, accy = 50;
     private Display display;
     private Point size = new Point();
     
+	@SuppressLint("NewApi")
 	private SensorEventListener mSensorEventListener = new SensorEventListener() {
         @Override
 	    public void onSensorChanged(SensorEvent event) {
@@ -90,22 +103,28 @@ public class screen2 extends Activity{
 	         	azimuth = Math.round(event.values[0]);
 	         	cv.setRotation(-azimuth +angle);
 	         	st_look = (360 - (azimuth - angle));
-	         	av.setX(accx + (st_look*5));
+	         	av.setX(accx + (st_look*8));
+	         	
+	         	if(st_look > 360)
+	         		st_look = st_look % 360;
 	         	if(st_look < 45 && st_look > -45 && acty > 8 ){
 	         		cv.setAlpha(0);
 	         		av.setAlpha(100);
+	         		txtgps.setX(accx + (st_look*8));
+	         		txtgps.setY(accy);
 	         		
 	         	}
 	         	else{
 	         		cv.setAlpha(100);
 	         		av.setAlpha(0);
+	         		txtgps.setX(0);
+	         		txtgps.setY(0);
 	         	}
-	         	txtcomp.setText("actx:"+ actx + "\nacty:" + acty + "\nscreen size: " + width + "x" + height + "\nDirection: " + Float.toString(azimuth) + "\nSt look: " + Float.toString(st_look));
-	         	
+	         	txtcomp.setText("actx:"+ actx + "\nacty:" + acty + "\nscreen size: " + width + "x" + height + "\nNorth at: " + Float.toString(azimuth) + "\nPlace at: " + Float.toString(st_look));
         	}
 	    }
 	
-	        @Override
+	    @Override
 	    public void onAccuracyChanged(Sensor sensor, int accuracy) {
 	    }
 
@@ -118,15 +137,28 @@ public class screen2 extends Activity{
 	 mlocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 	 mlocListener = new LocationListener(){
    	  public void onLocationChanged(Location loc) {
-   		    
-   		    loc2.setLatitude(erby);
-   		    loc2.setLongitude(erbx);
+   		    if(building == "erb")
+   		    {
+   		    	locy = erby;
+   		    	locx = erbx;
+   		    }
+   		    else if(building == "nh"){
+   		    	locy = nhy;
+   		    	locx = nhx;
+   		    }
+   		    else if(building == "mac"){
+   		    	locy = macy;
+   		    	locx = macx;
+   		    }
+   		   
+   		    loc2.setLatitude(locy);
+   		    loc2.setLongitude(locx);
    		    angle = loc.bearingTo(loc2);
    		  	
    		    distance = loc2.distanceTo(loc);
    		  	String s = Float.toString(angle);
-   		  	String dist = Float.toString(distance);
-   	        txtgps.setText("Distance = " + dist + " m \n" + "  Angle = " + s);
+   		  	int dist = Math.round(distance);
+   	        txtgps.setText(dist + " m \n");
    		  
    	    }
 
@@ -191,8 +223,11 @@ public class screen2 extends Activity{
 		preview.setLayoutParams(lp);
 		setContentView(preview);
         mCamera = getCameraInstance();
-        Intent intent = getIntent();
         
+        //Getting building names
+        //Intent intent = getIntent();
+       
+              
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
         preview.addView(mPreview);
@@ -206,8 +241,10 @@ public class screen2 extends Activity{
         preview.addView(cv);
         preview.addView(txtgps);
         preview.addView(txtcomp);
-        txtgps.setText("Waiting for information from GPS...\nCurrently showing North");
+        txtgps.setText("Waiting for information from GPS...\nCurrently showing North" + "\n selected building:" + building);
         txtcomp.setX(550);
         txtcomp.setText("compass view...");
+        
+        //displaying building name(for checking)
 		}
 }

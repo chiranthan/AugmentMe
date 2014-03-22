@@ -10,19 +10,19 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
 
-public class FindActivity extends Activity {
+public class FindBuildings extends Activity {
 	
 	private static final String TAG = "FindActivity";
 	private UiLifecycleHelper uiHelper;
+	public static String value = null;
 	
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_find);
-//		Intent intent = getIntent();
-//		Button buildings = (Button)findViewById(R.id.next);
+		setContentView(R.layout.buildings);
 		
 	    uiHelper = new UiLifecycleHelper(this, callback);
 	    uiHelper.onCreate(savedInstanceState);
@@ -102,9 +102,28 @@ public class FindActivity extends Activity {
 	    uiHelper.onSaveInstanceState(outState);
 	}
 	
-	 public void sendMessage(View view)
+	  
+	 public void sendMessageBuildings(View view)
 	 {
-		 Intent intent = new Intent(this, FindBuildings.class);
+		 int id = view.getId();
+		 switch(id)
+		 {
+		 case R.id.erb :
+			 value = "erb";
+			 break;
+			 
+		 case R.id.nh :
+			 value = "nh";
+			 break;
+			 
+		 case R.id.mac :
+			 value = "mac";
+			 break;
+			 
+		 }
+		 Intent intent = new Intent(this, screen2.class);
+		
+	//	 intent.putExtra(EXTRA_MESSAGE, value);
 	  	  startActivity(intent);
 	 }
 

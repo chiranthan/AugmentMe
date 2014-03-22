@@ -32,7 +32,7 @@ public class MainFragment extends Fragment {
 	    View view = inflater.inflate(R.layout.main, container, false);
 	    LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
 	    authButton.setFragment(this);
-
+	    Button loginwithid = (Button) view.findViewById(R.id.login);
 	    return view;
 	}
 	
@@ -61,7 +61,7 @@ public class MainFragment extends Fragment {
 	        if (session.isOpened()) {
 	        	
 	        	
-	        	Button next = (Button)view.findViewById(R.id.button1);
+	        	Button next = (Button)view.findViewById(R.id.next);
 	        	next.setVisibility(View.VISIBLE);
 	        	next.setText("Continue");
 	        	
@@ -142,5 +142,7 @@ public class MainFragment extends Fragment {
 	    super.onSaveInstanceState(outState);
 	    uiHelper.onSaveInstanceState(outState);
 	}
+	
+	
 
 }

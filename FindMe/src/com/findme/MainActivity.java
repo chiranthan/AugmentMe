@@ -30,6 +30,7 @@ public class MainActivity extends FragmentActivity {
 	        mainFragment = (MainFragment) getSupportFragmentManager()
 	        .findFragmentById(android.R.id.content);
 	    }
+
 		
 		
 	}
@@ -38,6 +39,12 @@ public class MainActivity extends FragmentActivity {
     {
   	  Intent intent = new Intent(this, FindActivity.class);
   	  startActivity(intent);
+    }
+	
+	public void sendLoginMessage(View view)
+    {
+  	  Intent intent = new Intent(this, Login.class);
+	  startActivity(intent);
     }
 	
 	@Override

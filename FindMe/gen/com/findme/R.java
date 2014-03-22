@@ -222,54 +222,76 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020023;
     }
     public static final class id {
-        public static final int action_settings=0x7f04001c;
+        public static final int action_settings=0x7f04002f;
         public static final int authButton=0x7f040004;
-        public static final int button1=0x7f040003;
-        public static final int button2=0x7f040005;
-        public static final int com_facebook_login_activity_progress_bar=0x7f040008;
-        public static final int com_facebook_picker_activity_circle=0x7f040007;
-        public static final int com_facebook_picker_checkbox=0x7f04000a;
-        public static final int com_facebook_picker_checkbox_stub=0x7f04000e;
-        public static final int com_facebook_picker_divider=0x7f040012;
-        public static final int com_facebook_picker_done_button=0x7f040011;
-        public static final int com_facebook_picker_image=0x7f04000b;
-        public static final int com_facebook_picker_list_section_header=0x7f04000f;
-        public static final int com_facebook_picker_list_view=0x7f040006;
-        public static final int com_facebook_picker_profile_pic_stub=0x7f04000c;
-        public static final int com_facebook_picker_row_activity_circle=0x7f040009;
-        public static final int com_facebook_picker_search_text=0x7f040017;
-        public static final int com_facebook_picker_title=0x7f04000d;
-        public static final int com_facebook_picker_title_bar=0x7f040014;
-        public static final int com_facebook_picker_title_bar_stub=0x7f040013;
-        public static final int com_facebook_picker_top_bar=0x7f040010;
-        public static final int com_facebook_search_bar_view=0x7f040016;
-        public static final int com_facebook_usersettingsfragment_login_button=0x7f04001a;
-        public static final int com_facebook_usersettingsfragment_logo_image=0x7f040018;
-        public static final int com_facebook_usersettingsfragment_profile_name=0x7f040019;
+        public static final int com_facebook_login_activity_progress_bar=0x7f040010;
+        public static final int com_facebook_picker_activity_circle=0x7f04000f;
+        public static final int com_facebook_picker_checkbox=0x7f040012;
+        public static final int com_facebook_picker_checkbox_stub=0x7f040016;
+        public static final int com_facebook_picker_divider=0x7f04001a;
+        public static final int com_facebook_picker_done_button=0x7f040019;
+        public static final int com_facebook_picker_image=0x7f040013;
+        public static final int com_facebook_picker_list_section_header=0x7f040017;
+        public static final int com_facebook_picker_list_view=0x7f04000e;
+        public static final int com_facebook_picker_profile_pic_stub=0x7f040014;
+        public static final int com_facebook_picker_row_activity_circle=0x7f040011;
+        public static final int com_facebook_picker_search_text=0x7f04001f;
+        public static final int com_facebook_picker_title=0x7f040015;
+        public static final int com_facebook_picker_title_bar=0x7f04001c;
+        public static final int com_facebook_picker_title_bar_stub=0x7f04001b;
+        public static final int com_facebook_picker_top_bar=0x7f040018;
+        public static final int com_facebook_search_bar_view=0x7f04001e;
+        public static final int com_facebook_usersettingsfragment_login_button=0x7f040022;
+        public static final int com_facebook_usersettingsfragment_logo_image=0x7f040020;
+        public static final int com_facebook_usersettingsfragment_profile_name=0x7f040021;
+        public static final int emailid=0x7f040029;
+        public static final int erb=0x7f04000c;
+        public static final int firstname=0x7f040006;
         public static final int large=0x7f040002;
+        public static final int lastname=0x7f040008;
+        public static final int login=0x7f040005;
+        public static final int mac=0x7f04000d;
+        public static final int newuser=0x7f04000a;
+        public static final int next=0x7f040003;
+        public static final int nh=0x7f04000b;
         public static final int normal=0x7f040001;
-        public static final int picker_subtitle=0x7f040015;
+        public static final int password=0x7f040009;
+        public static final int phone=0x7f04002b;
+        public static final int picker_subtitle=0x7f04001d;
+        public static final int pwd=0x7f040028;
+        public static final int reenteredpwd=0x7f04002a;
+        public static final int register=0x7f04002d;
         public static final int small=0x7f040000;
-        public static final int welcome=0x7f04001b;
+        public static final int textView1=0x7f040024;
+        public static final int textView2=0x7f040023;
+        public static final int textView3=0x7f040025;
+        public static final int textView4=0x7f040027;
+        public static final int textView5=0x7f040026;
+        public static final int textView6=0x7f04002c;
+        public static final int username=0x7f040007;
+        public static final int welcome=0x7f04002e;
     }
     public static final class layout {
         public static final int activity_find=0x7f030000;
-        public static final int com_facebook_friendpickerfragment=0x7f030001;
-        public static final int com_facebook_login_activity_layout=0x7f030002;
-        public static final int com_facebook_picker_activity_circle_row=0x7f030003;
-        public static final int com_facebook_picker_checkbox=0x7f030004;
-        public static final int com_facebook_picker_image=0x7f030005;
-        public static final int com_facebook_picker_list_row=0x7f030006;
-        public static final int com_facebook_picker_list_section_header=0x7f030007;
-        public static final int com_facebook_picker_search_box=0x7f030008;
-        public static final int com_facebook_picker_title_bar=0x7f030009;
-        public static final int com_facebook_picker_title_bar_stub=0x7f03000a;
-        public static final int com_facebook_placepickerfragment=0x7f03000b;
-        public static final int com_facebook_placepickerfragment_list_row=0x7f03000c;
-        public static final int com_facebook_search_bar_layout=0x7f03000d;
-        public static final int com_facebook_usersettingsfragment=0x7f03000e;
-        public static final int main=0x7f03000f;
-        public static final int screen2=0x7f030010;
+        public static final int activity_login=0x7f030001;
+        public static final int buildings=0x7f030002;
+        public static final int com_facebook_friendpickerfragment=0x7f030003;
+        public static final int com_facebook_login_activity_layout=0x7f030004;
+        public static final int com_facebook_picker_activity_circle_row=0x7f030005;
+        public static final int com_facebook_picker_checkbox=0x7f030006;
+        public static final int com_facebook_picker_image=0x7f030007;
+        public static final int com_facebook_picker_list_row=0x7f030008;
+        public static final int com_facebook_picker_list_section_header=0x7f030009;
+        public static final int com_facebook_picker_search_box=0x7f03000a;
+        public static final int com_facebook_picker_title_bar=0x7f03000b;
+        public static final int com_facebook_picker_title_bar_stub=0x7f03000c;
+        public static final int com_facebook_placepickerfragment=0x7f03000d;
+        public static final int com_facebook_placepickerfragment_list_row=0x7f03000e;
+        public static final int com_facebook_search_bar_layout=0x7f03000f;
+        public static final int com_facebook_usersettingsfragment=0x7f030010;
+        public static final int createuser=0x7f030011;
+        public static final int main=0x7f030012;
+        public static final int screen2=0x7f030013;
     }
     public static final class menu {
         public static final int find=0x7f090000;
@@ -345,7 +367,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_friend_picker_fragment_multi_select com.fblogin:multi_select}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_friend_picker_fragment_multi_select com.findme:multi_select}</code></td><td></td></tr>
            </table>
            @see #com_facebook_friend_picker_fragment_multi_select
          */
@@ -363,7 +385,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:multi_select
+          @attr name com.findme:multi_select
         */
         public static final int com_facebook_friend_picker_fragment_multi_select = 0;
         /** Attributes that can be used with a com_facebook_login_view.
@@ -372,10 +394,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_login_view_confirm_logout com.fblogin:confirm_logout}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_login_view_fetch_user_info com.fblogin:fetch_user_info}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_login_view_login_text com.fblogin:login_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_login_view_logout_text com.fblogin:logout_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_confirm_logout com.findme:confirm_logout}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_fetch_user_info com.findme:fetch_user_info}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_login_text com.findme:login_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_login_view_logout_text com.findme:logout_text}</code></td><td></td></tr>
            </table>
            @see #com_facebook_login_view_confirm_logout
            @see #com_facebook_login_view_fetch_user_info
@@ -396,7 +418,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:confirm_logout
+          @attr name com.findme:confirm_logout
         */
         public static final int com_facebook_login_view_confirm_logout = 0;
         /**
@@ -410,7 +432,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:fetch_user_info
+          @attr name com.findme:fetch_user_info
         */
         public static final int com_facebook_login_view_fetch_user_info = 1;
         /**
@@ -424,7 +446,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:login_text
+          @attr name com.findme:login_text
         */
         public static final int com_facebook_login_view_login_text = 2;
         /**
@@ -438,7 +460,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:logout_text
+          @attr name com.findme:logout_text
         */
         public static final int com_facebook_login_view_logout_text = 3;
         /** Attributes that can be used with a com_facebook_picker_fragment.
@@ -447,13 +469,13 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_background com.fblogin:done_button_background}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_text com.fblogin:done_button_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_extra_fields com.fblogin:extra_fields}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_show_pictures com.fblogin:show_pictures}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_show_title_bar com.fblogin:show_title_bar}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_title_bar_background com.fblogin:title_bar_background}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_picker_fragment_title_text com.fblogin:title_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_background com.findme:done_button_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_done_button_text com.findme:done_button_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_extra_fields com.findme:extra_fields}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_show_pictures com.findme:show_pictures}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_show_title_bar com.findme:show_title_bar}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_title_bar_background com.findme:title_bar_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_picker_fragment_title_text com.findme:title_text}</code></td><td></td></tr>
            </table>
            @see #com_facebook_picker_fragment_done_button_background
            @see #com_facebook_picker_fragment_done_button_text
@@ -474,7 +496,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.fblogin:done_button_background
+          @attr name com.findme:done_button_background
         */
         public static final int com_facebook_picker_fragment_done_button_background = 6;
         /**
@@ -488,7 +510,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:done_button_text
+          @attr name com.findme:done_button_text
         */
         public static final int com_facebook_picker_fragment_done_button_text = 4;
         /**
@@ -502,7 +524,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:extra_fields
+          @attr name com.findme:extra_fields
         */
         public static final int com_facebook_picker_fragment_extra_fields = 1;
         /**
@@ -516,7 +538,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:show_pictures
+          @attr name com.findme:show_pictures
         */
         public static final int com_facebook_picker_fragment_show_pictures = 0;
         /**
@@ -530,7 +552,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:show_title_bar
+          @attr name com.findme:show_title_bar
         */
         public static final int com_facebook_picker_fragment_show_title_bar = 2;
         /**
@@ -540,7 +562,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.fblogin:title_bar_background
+          @attr name com.findme:title_bar_background
         */
         public static final int com_facebook_picker_fragment_title_bar_background = 5;
         /**
@@ -554,7 +576,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:title_text
+          @attr name com.findme:title_text
         */
         public static final int com_facebook_picker_fragment_title_text = 3;
         /** Attributes that can be used with a com_facebook_place_picker_fragment.
@@ -563,10 +585,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_radius_in_meters com.fblogin:radius_in_meters}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_results_limit com.fblogin:results_limit}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_search_text com.fblogin:search_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_place_picker_fragment_show_search_box com.fblogin:show_search_box}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_radius_in_meters com.findme:radius_in_meters}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_results_limit com.findme:results_limit}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_search_text com.findme:search_text}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_place_picker_fragment_show_search_box com.findme:show_search_box}</code></td><td></td></tr>
            </table>
            @see #com_facebook_place_picker_fragment_radius_in_meters
            @see #com_facebook_place_picker_fragment_results_limit
@@ -587,7 +609,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:radius_in_meters
+          @attr name com.findme:radius_in_meters
         */
         public static final int com_facebook_place_picker_fragment_radius_in_meters = 0;
         /**
@@ -601,7 +623,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:results_limit
+          @attr name com.findme:results_limit
         */
         public static final int com_facebook_place_picker_fragment_results_limit = 1;
         /**
@@ -615,7 +637,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:search_text
+          @attr name com.findme:search_text
         */
         public static final int com_facebook_place_picker_fragment_search_text = 2;
         /**
@@ -629,7 +651,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:show_search_box
+          @attr name com.findme:show_search_box
         */
         public static final int com_facebook_place_picker_fragment_show_search_box = 3;
         /** Attributes that can be used with a com_facebook_profile_picture_view.
@@ -638,8 +660,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #com_facebook_profile_picture_view_is_cropped com.fblogin:is_cropped}</code></td><td></td></tr>
-           <tr><td><code>{@link #com_facebook_profile_picture_view_preset_size com.fblogin:preset_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_is_cropped com.findme:is_cropped}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_facebook_profile_picture_view_preset_size com.findme:preset_size}</code></td><td></td></tr>
            </table>
            @see #com_facebook_profile_picture_view_is_cropped
            @see #com_facebook_profile_picture_view_preset_size
@@ -658,7 +680,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.fblogin:is_cropped
+          @attr name com.findme:is_cropped
         */
         public static final int com_facebook_profile_picture_view_is_cropped = 1;
         /**
@@ -676,7 +698,7 @@ containing a value of this type.
 <tr><td><code>normal</code></td><td>-3</td><td></td></tr>
 <tr><td><code>large</code></td><td>-4</td><td></td></tr>
 </table>
-          @attr name com.fblogin:preset_size
+          @attr name com.findme:preset_size
         */
         public static final int com_facebook_profile_picture_view_preset_size = 0;
     };
