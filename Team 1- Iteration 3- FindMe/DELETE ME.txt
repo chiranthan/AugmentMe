@@ -1,0 +1,11 @@
+DOC 1 ==> Features and implementation schedule...Complete the table
+DOC 2 ==> If needed add screen shots..if u r adding dont forget to add that under table of contents.
+Doc 3 ==> Insert the code
+Doc 4 ==> Add Test Cases...havent deleted the old 1
+Doc 5 ==> Have added 2 new open issues which prof had asked...add if u know any
+Doc6  ==> add how to run the test cases.
+Doc 7 ==> Its blank right now add something
+
+Atlast...dont forget to delete this file before submitting
+
+add reference page in ppt as well
